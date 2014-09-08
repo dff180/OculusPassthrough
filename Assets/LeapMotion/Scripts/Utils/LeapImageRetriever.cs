@@ -61,7 +61,8 @@ public class LeapImageRetriever : MonoBehaviour {
 
   void Start() {
     leap_controller_ = new Controller();
-    leap_controller_.SetPolicyFlags(Controller.PolicyFlag.POLICY_IMAGES);
+    leap_controller_.SetPolicyFlags(leap_controller_.PolicyFlags |
+                                    Controller.PolicyFlag.POLICY_IMAGES);
 
     SetMainTextureDimensions(DEFAULT_TEXTURE_WIDTH, DEFAULT_TEXTURE_HEIGHT);
     SetDistortionDimensions(DEFAULT_DISTORTION_WIDTH, DEFAULT_DISTORTION_HEIGHT);

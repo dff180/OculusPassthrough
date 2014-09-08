@@ -93,6 +93,9 @@ public class HandControllerEditor : Editor {
     controller.separateLeftRight = EditorGUILayout.Toggle("Separate Left/Right",
                                                           controller.separateLeftRight);
 
+    controller.isHeadMounted = EditorGUILayout.Toggle("Is Head Mounted",
+                                                      controller.isHeadMounted);
+
     if (controller.separateLeftRight) {
       controller.leftGraphicsModel =
           (HandModel)EditorGUILayout.ObjectField("Left Hand Graphics Model",
