@@ -58,7 +58,7 @@ public class HandController : MonoBehaviour {
       policy_flags |= Controller.PolicyFlag.POLICY_OPTIMIZE_HMD;
     else
       policy_flags &= ~Controller.PolicyFlag.POLICY_OPTIMIZE_HMD;
-    // leap_controller_.SetPolicyFlags(policy_flags);
+    leap_controller_.SetPolicyFlags(policy_flags);
 
     hand_graphics_ = new Dictionary<int, HandModel>();
     hand_physics_ = new Dictionary<int, HandModel>();
